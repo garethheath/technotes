@@ -316,3 +316,27 @@ tasks:
 pre_tasks          #used in playbook to run tasks before role
 post_task          #used in playbook to run tasks after role
 ```
+
+
+# Setting up a Windows host
+
+## may need to use
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+## docker-compose example
+```
+version: "3.8"
+services:
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Unbr3akable.Passw0rd"
+      ACCEPT_EULA: "Y"
+  web:
+    build: .
+    ports:
+      - "8080:80"
+```

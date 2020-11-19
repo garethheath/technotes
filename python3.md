@@ -1,3 +1,39 @@
+## help function
+
+# display objects/modules
+
+```python
+dir()
+```
+
+# display functions and types from the builtins module
+
+```python
+dir(__builtins__)
+```
+
+# display the help for a function from the builtins module.
+# functions with params inside brackets [] are optional
+# -> indicates the return type
+
+```python
+help(pow)
+
+Help on built-in function pow in module __builtin__:
+
+pow(...)
+    pow(x, y[, z]) -> number
+    
+    With two arguments, equivalent to x**y.  With three arguments,
+    equivalent to (x**y) % z, but may be more efficient (e.g. for longs).
+```
+
+# list all modules
+
+```python
+help('modules')
+```
+
 ## returns the number of vowels in string
 
 ```python
